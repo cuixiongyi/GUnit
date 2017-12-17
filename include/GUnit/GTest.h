@@ -28,8 +28,8 @@ struct TestRun {
   bool next = true;
 
   std::string GetShouldParam() const {
-    const auto sep = GTEST_FLAG(filter).find(":");
-    return sep == std::string::npos ? "*" : GTEST_FLAG(filter).substr(sep + 1);
+    const auto sep = std::string(GTEST_FLAG(filter)).find(":");
+    return sep == std::string::npos ? "*" : std::string(GTEST_FLAG(filter)).substr(sep + 1);
   }
 
   bool run(const std::string& type, const std::string& name, int line,

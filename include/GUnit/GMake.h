@@ -47,7 +47,7 @@ struct deref<std::weak_ptr<T>> {
 };
 
 template <class T>
-struct deref<NaggyMock<T>> {
+struct deref<NaggyGMock<T>> {
   using type = typename deref<T>::type;
 };
 

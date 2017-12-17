@@ -235,7 +235,7 @@ class GMock {
           fs[__PRETTY_FUNCTION__].get());
     }();
 
-    if (internal::CallReaction::kAllow ==
+    if (internal::CallReaction::ALLOW ==
         detail::GetCallReaction()(internal::ImplicitCast_<GMock<T> *>(this))) {
       ptr->SetOwnerAndName(this, __PRETTY_FUNCTION__);
     } else {
